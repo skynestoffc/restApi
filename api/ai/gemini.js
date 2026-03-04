@@ -4,7 +4,7 @@ module.exports = (app) => {
   const genAI = new GoogleGenerativeAI("AIzaSyA1hu0yaOTceWWVZtUypv1VVHXT7PmL2xc")
 
   async function Llama(prom) {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" })
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" })
     const result = await model.generateContent(prom)
     const response = await result.response
     const texts = response.text()
